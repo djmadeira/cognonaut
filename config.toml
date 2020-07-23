@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://cognonaut.xyz/"
 languageCode = "en-us"
-title = "Cognonaut"
+title = "cognonaut"
 theme = "cryosleep"
 paginate = 20
 
@@ -40,14 +40,13 @@ paginate = 20
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "cognonaut"
     subtitle = ""
     owner = ""
     keywords = ""
     copyright = ""
-    menuMore = "Show more"
-    readMore = ">>"
-    readOtherPosts = "Read other posts"
+    readMore = "read more >>"
+    readOtherPosts = "read other posts"
     missingContentMessage = "Page not found..."
     missingBackButtonLabel = "Back to home page"
 
@@ -56,3 +55,24 @@ paginate = 20
       logoHomeLink = "/"
 
     [languages.en.menu]
+
+[deployment]
+
+[[deployment.targets]]
+name="aws"
+URL="s3://cognonaut?region=us-east-1"
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true

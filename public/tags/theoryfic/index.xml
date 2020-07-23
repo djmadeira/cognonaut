@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>theoryfic on cognonaut</title>
+    <link>https://cognonaut.xyz/tags/theoryfic/</link>
+    <description>Recent content in theoryfic on cognonaut</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2020 16:13:56 -0400</lastBuildDate>
+    
+	<atom:link href="https://cognonaut.xyz/tags/theoryfic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>xenonomica</title>
+      <link>https://cognonaut.xyz/posts/xenonomica/</link>
+      <pubDate>Thu, 23 Jul 2020 16:13:56 -0400</pubDate>
+      
+      <guid>https://cognonaut.xyz/posts/xenonomica/</guid>
+      <description>The Xenonomica is a federated store of snippets, fragments of an evolving lexicon of critical and aesthetic gestures that evolves with and constitues our collective subjectivity. It is created by and operates on the workings of human desires, but it is something other than them. It has its own life (un-life?), its own immanence; it can be felt to be resisting the human forces working on it, can be seen to have its own desiring function which is inhuman, surhuman, and alien.</description>
+    </item>
+    
+  </channel>
+</rss>
