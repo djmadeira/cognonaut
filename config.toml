@@ -1,4 +1,4 @@
-baseURL = "https://cognonaut.xyz/"
+baseURL = "https://www.cognonaut.xyz/"
 languageCode = "en-us"
 title = "cognonaut"
 theme = "cryosleep"
@@ -60,7 +60,7 @@ paginate = 20
 
 [[deployment.targets]]
 name="aws"
-URL="s3://cognonaut?region=us-east-1"
+URL="s3://www.cognonaut.xyz?region=us-east-1"
 
 [[deployment.matchers]]
 #  Cache static assets for 1 year.

@@ -1,7 +1,7 @@
 +++
 title = "xenonomica"
 date = "2020-07-23T16:13:56-04:00"
-cover = ""
+cover = "xenonomica.jpg"
 tags = ["theoryfic"]
 description = "fragment on an unknown repository"
 showFullContent = false

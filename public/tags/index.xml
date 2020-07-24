@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on cognonaut</title>
-    <link>https://cognonaut.xyz/tags/</link>
+    <link>https://www.cognonaut.xyz/tags/</link>
     <description>Recent content in Tags on cognonaut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Jul 2020 16:13:56 -0400</lastBuildDate>
     
-	<atom:link href="https://cognonaut.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.cognonaut.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>theoryfic</title>
-      <link>https://cognonaut.xyz/tags/theoryfic/</link>
+      <link>https://www.cognonaut.xyz/tags/theoryfic/</link>
       <pubDate>Thu, 23 Jul 2020 16:13:56 -0400</pubDate>
       
-      <guid>https://cognonaut.xyz/tags/theoryfic/</guid>
+      <guid>https://www.cognonaut.xyz/tags/theoryfic/</guid>
       <description></description>
     </item>
     
