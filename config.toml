@@ -1,10 +1,11 @@
-baseURL = "https://www.cognonaut.xyz/"
+baseURL = "https://cognonaut.xyz/"
 languageCode = "en-us"
 title = "cognonaut"
 theme = "cryosleep"
 paginate = 20
 
 [params]
+  dateFormat = "2006::01::02"
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 99
 
@@ -30,11 +31,14 @@ paginate = 20
   # it's set to `true` by default
   # oneHeadingSize = false
 
+[author]
+  name = "cognonaut"
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
-  creator = "dj_madeira"
+  creator = "entirelygone"
   site = ""
 
 [languages]
