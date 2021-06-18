@@ -1,0 +1,46 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ template "_internal/google_analytics.html" . }}
+
+<!-- Theme CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" importance="low"> 
+{{ $sassOptions := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "sass/main.scss" | toCSS $sassOptions }} 
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="{{ $.Site.Params.Twitter.creator }}" />
+
+<!-- OG data -->
+<meta property="og:locale" content="{{ $.Site.Language.Lang }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Title }}" />
+{{ if and (not .IsHome) (isset .Params "cover") }}
+<meta property="og:image" content="{{ if .Param "cover" }}{{ .Param "cover" | absURL }}{{ else }}/tw_card_alt.jpg{{ end }}">
+{{ else }}
+  {{ if isset $.Site.Params "favicon" }}
+    <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">
+  {{ else }}
+    <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
+  {{ end }}
+{{ end }}
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+{{ range .Params.categories }}
+  <meta property="article:section" content="{{ . }}" />
+{{ end }}
+{{ if isset .Params "date" }}
+  <meta property="article:published_time" content="{{ time .Date }}" />
+{{ end }}
+
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}

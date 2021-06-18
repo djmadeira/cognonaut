@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="footer__links">
+      <ul>
+          <li><a href="https://twitter.com/{{ $.Site.Params.Twitter.creator }}">Twitter</a></li>
+          {{ with .OutputFormats.Get "RSS" -}}
+              <li>{{ printf `<a rel="%s" type="%s" href="%s">RSS</a>` .Rel .MediaType.Type .Permalink | safeHTML }}</li>
+          {{ end -}}
+      </ul>
+  </div>
+  <div class="footer__bio">
+      <span>Yet another line of flight out of late capitalism.<br>All content, code and assests GPL.</span>
+  </div>
+</footer>

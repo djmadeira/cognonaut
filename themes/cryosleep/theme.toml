@@ -1,0 +1,12 @@
+name = "cryosleep"
+license = "MIT"
+licenselink = ""
+description = ""
+homepage = ""
+tags = []
+features = []
+min_version = 0.57
+
+[author]
+  name = "DJ Madeira"
+  homepage = "http://djmadeira.com"
