@@ -1,6 +1,6 @@
 +++
 title = "The Eros of Socrates"
-date = "2021-06-21:11:00-04:00"
+date = "2021-06-21T06:00:00-04:00"
 draft = false
 cover = ""
 tags = ["theory"]
