@@ -1,0 +1,52 @@
+---
+title: "Daily Tao Te Ching"
+---
+
+<p>Would you enjoy receiving a chapter from the Tao Te Ching (as translated by <a href="https://austinkleon.com/2021/02/19/ursula-k-le-guins-translation-of-the-tao-te-ching/">Ursula K. Le Guin</a>) daily via email?</p>
+<form id="signup_form">
+<label>email:
+<input type="email" id="signup_email"/>
+</label>
+<button type="submit" id="signup_submit">yes, thank you</button>
+<p id="signup_result"></p>
+</form>
+<script>
+const form = document.querySelector('#signup_form');
+const input = document.querySelector('#signup_email');
+const submit = document.querySelector('#signup_submit');
+const result = document.querySelector('#signup_result');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = input.value;
+    let timezone;
+
+    try {
+       timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    } catch(err) {}
+
+    if (!email) {
+        result.innerText = 'gotta give me something to go on :/'; 
+        return;
+    }
+
+    submit.disabled = true;
+    input.disabled = true;
+
+    fetch(new Request('https://tao-te-ching.azurewebsites.net/api/TaoTeChingSignup?code=DXHSN7IgFurzJp7Y9I4wvaq1mmU3kFS3bDUvsl2FIwrQhXxulx/X4w==', {
+        method: 'POST',
+        body: JSON.stringify({
+            email,
+            timezone
+        })
+    })).then((res) => {
+        let resultMessage = 'uhh, something went wrong, sorry';
+        if (res.ok) {
+            resultMessage = 'cool, you\'re in';
+        }
+
+        result.innerText = resultMessage;
+    });
+});
+</script>

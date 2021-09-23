@@ -28,6 +28,15 @@ body {
     background-color: rgb(10, 0, 25);
 }
 
+input, button {
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: 'Anonymous Pro', 'Courier New', monospace;
+    border: none;
+    border-radius: 0;
+    padding: $u-small;
+}
+
 a {
     color: $color-link;
     text-decoration: none;
@@ -37,6 +46,16 @@ h1, h2, h3, h4 {
     margin: 0;
     font-weight: 400;
     text-transform: lowercase;
+}
+
+input {
+    background: $color-text;
+    color: black;
+}
+
+button {
+    background: $color-text;
+    color: black;
 }
 
 .container {
