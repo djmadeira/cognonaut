@@ -36,6 +36,7 @@ form.addEventListener('submit', (e) => {
 
     fetch(new Request('https://tao-te-ching.azurewebsites.net/api/TaoTeChingSignup?code=DXHSN7IgFurzJp7Y9I4wvaq1mmU3kFS3bDUvsl2FIwrQhXxulx/X4w==', {
         method: 'POST',
+        mode: 'cors',
         body: JSON.stringify({
             email,
             timezone
