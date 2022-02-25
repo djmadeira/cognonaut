@@ -1,4 +1,4 @@
-$color-text: #FDFDFD;
+$color-text: #F0F0F0;
 $color-link: #AF7FFD;
 $color-link-alt: #CEA6FD;
 $color-term: #8B00FF;
@@ -58,13 +58,19 @@ button {
     color: black;
 }
 
+blockquote {
+    border-left: $u-medium solid $color-link;
+    margin-left: 0;
+    padding-left: 16px;
+}
+
 .container {
     background: url('/bg_alt.jpg') no-repeat top center;
     background-color: black;
     background-size: 100% auto;
-    width: 680px;
+    width: 800px;
     max-width: 100%;
-    padding: 0 $u-xlarge;
+    padding: 0 32px;
     flex: 1 100vh;
     display: flex;
     flex-direction: column;
