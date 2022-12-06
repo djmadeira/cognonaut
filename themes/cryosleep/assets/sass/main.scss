@@ -8,6 +8,7 @@ $u-small: 8px;
 $u-medium: 12px;
 $u-large: 16px;
 $u-xlarge: 24px;
+$u-xxlarge: 32px;
 
 .shadow {
     text-shadow: 1px 1px 0px black;
@@ -105,7 +106,7 @@ blockquote {
 .post {
     &.on-list {
         padding: $u-large $u-xlarge;
-        margin: 0 (-$u-xlarge) $u-xlarge (-$u-xlarge);
+        margin: 0 (-$u-xxlarge) $u-xxlarge (-$u-xxlarge);
         background: $color-term;
         @extend .shadow;
 
@@ -167,6 +168,10 @@ blockquote {
 
 .post-content {
     margin: $u-xlarge 0 ($u-xlarge * 2);
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .blink {

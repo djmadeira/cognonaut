@@ -1,7 +1,7 @@
 +++
 title = "The Eros of Socrates"
 date = "2021-06-21T06:00:00-04:00"
-draft = false
+draft = true
 cover = ""
 tags = ["theory"]
 description = "a reading of phaedrus"

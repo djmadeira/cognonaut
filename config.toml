@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "cognonaut"
 theme = "cryosleep"
 paginate = 20
-
 [params]
   dateFormat = "2006::01::02"
   # if you set this to 0, only submenu trigger will be visible
@@ -54,11 +53,8 @@ paginate = 20
     missingContentMessage = "Page not found..."
     missingBackButtonLabel = "Back to home page"
 
-    [languages.en.params.logo]
-      logoText = "Cognonaut"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
+[markup.goldmark.renderer]
+  unsafe= true
 
 [deployment]
 
