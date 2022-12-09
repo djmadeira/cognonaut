@@ -169,7 +169,7 @@ blockquote {
 .post-content {
     margin: $u-xlarge 0 ($u-xlarge * 2);
 
-    img {
+    img, iframe {
         max-width: 100%;
     }
 }
