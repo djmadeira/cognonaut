@@ -1,6 +1,6 @@
 +++
 title = "Christianity, Conservatism, and Nihilism"
-date = 2022-12-12:06:35-05:00
+date = 2022-12-12T12:06:35-05:00
 draft = false
 cover = ""
 tags = ["philosophy"]
