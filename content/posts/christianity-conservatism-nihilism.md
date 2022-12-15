@@ -104,7 +104,7 @@ Another example of a violent clash between empirical science and society's uncon
 
 One such early proponent of an ancient earth was *James Hutton*, who published his masterwork *Theory of the Earth* in 1795, nearly a century before Darwin published *On the Origin of the Species*. Generally considered to be an impenetrable mess, his theories were popularized by his fiend John Playfair, who remarked: "On those of us who saw these phenomena for the first time, the impression made will not easily be forgotten… The mind seemed to grow giddy by looking so far into the abyss of time." What made such an impression on Hutton and his friends was a geological feature he called an *unconformity*. 
 
-![John Clerk of Eldin – Unconformity at Jedburgh, Borders (engraving)](/unconformity.jpg)
+![John Clerk of Eldin – Unconformity at Jedburgh, Borders (engraving)](/unconformity.png)
 
 As the late *Stephen Jay Gould* explains in his brilliant and accessible *Time’s Arrow, Time’s Cycle*, an unconformity is
 
