@@ -1,7 +1,8 @@
 <footer class="footer">
   <div class="footer__links">
       <ul>
-          <li><a href="https://twitter.com/{{ $.Site.Params.Twitter.creator }}">twitter</a></li>
+          <li><a href="https://kolektiva.social/@nerotic">@nerotic@kolektiva.social</a></li>
+          <li><a href="https://twitter.com/entirelygone">@entirelygone@twitter</a></li>
           {{ with .OutputFormats.Get "RSS" -}}
               <li>{{ printf `<a rel="%s" type="%s" href="%s">RSS</a>` .Rel .MediaType.Type .Permalink | safeHTML }}</li>
           {{ end -}}
