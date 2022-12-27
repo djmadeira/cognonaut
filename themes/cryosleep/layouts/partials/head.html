@@ -10,7 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" importance="low"> 
 {{ $sassOptions := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $style := resources.Get "sass/main.scss" | toCSS $sassOptions }} 
+{{ $js := resources.Get "js/main.js" | js.Build }} 
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<script src="{{ $js.RelPermalink }}" defer></script>
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />

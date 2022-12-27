@@ -71,7 +71,7 @@ blockquote {
     background-size: 100% auto;
     width: 800px;
     max-width: 100%;
-    padding: 0 32px;
+    padding: 0 $u-xlarge;
     flex: 1 100vh;
     display: flex;
     flex-direction: column;
@@ -148,9 +148,60 @@ blockquote {
     margin-bottom: $u-large;
 }
 
+.post-content {
+    position: relative;
+}
+
 .post-tags {
     display: block;
     margin-top: $u-medium;
+}
+
+.cite-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgb(0,0,0);
+    padding: $u-large $u-xlarge;
+    margin-left: -$u-xlarge;
+    margin-right: -$u-xlarge * 2;
+    max-width: calc(100% + 48px);
+
+    &:before, &:after {
+        display: block;
+        content: '';
+        border: 16px solid $color-link;
+        height: $u-xxlarge;
+        margin-left: -$u-xlarge;
+        margin-right: -$u-xlarge;
+    }
+
+    &:before {
+        border-width: $u-large $u-large 0;
+        margin-top: -$u-large;
+    }
+
+    &:after {
+        border-width: 0 $u-large $u-large;
+        margin-bottom: -$u-large;
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+.cite-box--close {
+    appearance: none;
+    --webkit-appearance: none;
+    background: $color-link;
+    border: none;
+    color: white;
+    width: $u-xxlarge * 4;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
 }
 
 .post-header {
