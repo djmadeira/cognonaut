@@ -194,22 +194,22 @@ p:first-child {
     }
 
     &:not(.hide) {
-        animation: .7s ease-out 1 cite-box;
+        animation: .5s ease-out 1 cite-box;
 
         .cite-box--inner {
-            animation: .7s ease-out 1 cite-box-inner;
+            animation: .5s ease-out 1 cite-box-inner;
         }
 
         .cite-box--close {
-            animation: .7s ease-out 1 cite-box-inner;
+            animation: .5s ease-out 1 cite-box-inner;
         }
 
         &:before {
-            animation: .7s ease-in-out 1 cite-bracket-top;
+            animation: .5s ease-in-out 1 cite-bracket-top;
         }
 
         &:after {
-            animation: .7s ease-in-out 1 cite-bracket-bottom;
+            animation: .5s ease-in-out 1 cite-bracket-bottom;
         }
     }
 
