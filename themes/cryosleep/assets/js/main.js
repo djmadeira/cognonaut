@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (lastCitation) {
                         const { top } = lastCitation.getBoundingClientRect();
                         if (top < 0 || top > window.innerHeight) {
-                            lastCitation.scrollIntoView();
+                            lastCitation.scrollIntoView({ behavior: 'smooth' });
                         }
                     }
                 });
