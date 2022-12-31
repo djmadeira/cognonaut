@@ -65,6 +65,10 @@ blockquote {
     padding-left: 16px;
 }
 
+p:first-child {
+    margin-top: 0;
+}
+
 .container {
     background: url('/bg_alt.jpg') no-repeat top center;
     background-color: black;
@@ -168,28 +172,113 @@ blockquote {
     max-width: calc(100% + 48px);
 
     &:before, &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
         display: block;
         content: '';
-        border: 16px solid $color-link;
+        border: 12px solid $color-link;
         height: $u-xxlarge;
-        margin-left: -$u-xlarge;
-        margin-right: -$u-xlarge;
     }
 
     &:before {
-        border-width: $u-large $u-large 0;
-        margin-top: -$u-large;
+        top: 0;
+        border-width: $u-medium $u-medium 0;
+        margin-top: -$u-medium;
     }
 
     &:after {
-        border-width: 0 $u-large $u-large;
-        margin-bottom: -$u-large;
+        bottom: 0;
+        border-width: 0 $u-medium $u-medium;
+        margin-bottom: -$u-medium;
+    }
+
+    &:not(.hide) {
+        animation: .7s ease-out 1 cite-box;
+
+        .cite-box--inner {
+            animation: .7s ease-out 1 cite-box-inner;
+        }
+
+        .cite-box--close {
+            animation: .7s ease-out 1 cite-box-inner;
+        }
+
+        &:before {
+            animation: .7s ease-in-out 1 cite-bracket-top;
+        }
+
+        &:after {
+            animation: .7s ease-in-out 1 cite-bracket-bottom;
+        }
     }
 
     &.hide {
         display: none;
     }
 }
+
+@keyframes cite-box {
+    0%, 50% {
+        background: rgba(0,0,0,0);
+    }
+
+    100% {
+        background: rgba(0,0,0,1);
+    }
+}
+
+@keyframes cite-box-inner {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes cite-bracket-top {
+    0% {
+        top: 50%;
+        left: calc(50% - 12px);
+        right: calc(50% - 12px);
+        width: 24px;
+    }
+
+    50% {
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes cite-bracket-bottom {
+    0% {
+        bottom: 50%;
+        left: calc(50% - 12px);
+        right: calc(50% - 12px);
+        width: 24px;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
 
 .cite-box--close {
     appearance: none;
@@ -245,13 +334,12 @@ blockquote {
 }
 
 .footer {
-    margin: auto (-$u-xxlarge) 0 (-$u-xxlarge);
+    margin: auto (-$u-xlarge) 0 (-$u-xlarge);
     padding: $u-xlarge;
     display: flex;
     justify-items: stretch;
     background: url('bg_end.jpg') no-repeat top center;
     background-size: cover;
-
     border-top: 1px solid $color-term;
 }
 
