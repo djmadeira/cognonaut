@@ -1,10 +1,10 @@
+// hello :3
 document.addEventListener('DOMContentLoaded', () => {
     Array.from(document.querySelectorAll('.cite')).forEach((el) => {
         el.addEventListener('click', (e) => {
             e.preventDefault();
 
             const citeId = e.target.href.substring(e.target.href.indexOf('#') + 1);
-
             let citeBox = document.querySelector('.cite-box');
 
             if (!citeBox) {
@@ -16,7 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeButton.classList.add('cite-box--close');
                 closeButton.innerHTML = 'X';
                 closeButton.addEventListener('click', () => {
-                    document.querySelector('.cite-box').classList.add('hide');
+                    const citeBox = document.querySelector('.cite-box');
+                    citeBox.classList.add('hide');
+                    const lastCitation = document.querySelector(`a[href="#${citeBox.dataset.citeId}"]`);
+                    if (lastCitation) {
+                        const { top } = lastCitation.getBoundingClientRect();
+                        if (top < 0 || top > window.innerHeight) {
+                            lastCitation.scrollIntoView();
+                        }
+                    }
                 });
                 el.appendChild(innerEl);
                 el.appendChild(closeButton);
@@ -34,9 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             citeBox.dataset.citeId = citeId;
-            citeBox.style.top = `${e.target.offsetTop + e.target.offsetHeight}px`;
+            citeBox.style.top = `${e.target.offsetTop + e.target.offsetHeight + 12}px`;
             citeBox.querySelector('.cite-box--inner').innerHTML = document.querySelector(`li#${citeId}`).innerHTML;
-
         });
     });
 });
